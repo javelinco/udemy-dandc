@@ -2,6 +2,9 @@ version: '3'
 services:
   postgres:
     image: 'postgres:latest'
+    environment:
+      - POSTGRES_PASSWORD=postgress_password
+      - POSTGRES_USER=postgres_complex
   redis:
     image: 'redis:latest'
   nginx:
@@ -23,9 +26,9 @@ services:
     environment:
       - REDIS_HOST=redis
       - REDIS_PORT=6379
-      - PGUSER=postgress
+      - PGUSER=postgres_complex
       - PGHOST=postgres
-      - PGDATABASE=postgres
+      - PGDATABASE=postgres_complex
       - PGPASSWORD=postgress_password
       - PGPORT=5432
   client:
