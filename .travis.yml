@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - cd \DockerAndKubernetes_TheCompleteGuide\complex
+  - cd .\DockerAndKubernetes_TheCompleteGuide\complex
   - docker build -t mmunson/react-test -f ./DockerAndKubernetes_TheCompleteGuide/complex/client/Dockerfile.dev ./DockerAndKubernetes_TheCompleteGuide/complex/client
 
 script:
